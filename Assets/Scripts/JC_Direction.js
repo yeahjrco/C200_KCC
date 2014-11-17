@@ -45,7 +45,7 @@ function OnGUI () {
 	// Begin a scroll view. All rects are calculated automatically - 
 	// it will use up any available screen space and make sure contents flow correctly.
 	// This is kept small with the last two parameters to force scrollbars to appear.
-	GUILayout.BeginArea(Rect(Screen.width*0.25,Screen.height/4,200,500));
+	GUILayout.BeginArea(Rect(Screen.width*0.09,Screen.height/4,200,500));
 	scrollPosition = GUILayout.BeginScrollView (scrollPosition);
 	
 	// We just add a single label to go inside the scroll view. Note how the
