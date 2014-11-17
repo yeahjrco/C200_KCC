@@ -14,4 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/YY_SiteText.unity
   - enabled: 1
-    path: Assets/Scenes/JC_Faceboobs.unity
+    path: Assets/Scenes/JC_WalkGuide.unity
