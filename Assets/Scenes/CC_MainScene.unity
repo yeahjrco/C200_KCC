@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainTexture: {fileID: 21300000, guid: 6812717abaaf2b74cb4ea1a6090cd032, type: 3}
   altTexture: {fileID: 21300000, guid: e93a25f0ca128d949b7dff3b1078f8d2, type: 3}
-  loadLevel: JC_WalkMap
+  loadLevel: JC_WalkGuide
 --- !u!135 &109516897
 SphereCollider:
   m_ObjectHideFlags: 0
