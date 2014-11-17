@@ -13,5 +13,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MT_HeritageMap.unity
   - enabled: 1
     path: Assets/Scenes/YY_SiteText.unity
+<<<<<<< HEAD
   - enabled: 1
     path: Assets/Scenes/JC_WalkGuide.unity
+=======
+>>>>>>> 5d30a35d0731bad5380e2fe9b88fd062b040e06a
