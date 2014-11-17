@@ -84,7 +84,7 @@ GameObject:
   - 4: {fileID: 109516894}
   - 212: {fileID: 109516895}
   - 114: {fileID: 109516896}
-  - 135: {fileID: 109516897}
+  - 65: {fileID: 109516897}
   m_Layer: 0
   m_Name: Button - Walk
   m_TagString: Untagged
@@ -99,8 +99,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 109516893}
   m_LocalRotation: {x: 3.09086232e-08, y: -.707106829, z: .707106829, w: -3.09086232e-08}
-  m_LocalPosition: {x: -3.92407346, y: .100002117, z: 3.79999995}
-  m_LocalScale: {x: 1, y: 1.60000002, z: 1}
+  m_LocalPosition: {x: 4.18200016, y: .100006923, z: 3.72000003}
+  m_LocalScale: {x: .360000014, y: .500999987, z: 1}
   m_Children: []
   m_Father: {fileID: 690270886}
   m_RootOrder: 0
@@ -124,7 +124,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6812717abaaf2b74cb4ea1a6090cd032, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e93a25f0ca128d949b7dff3b1078f8d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &109516896
 MonoBehaviour:
@@ -139,9 +139,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainTexture: {fileID: 21300000, guid: 6812717abaaf2b74cb4ea1a6090cd032, type: 3}
   altTexture: {fileID: 21300000, guid: e93a25f0ca128d949b7dff3b1078f8d2, type: 3}
+  disabledTexture: {fileID: 21300000, guid: 8dd8e7818d26fcd46946106424604c8c, type: 3}
   loadLevel: JC_WalkGuide
---- !u!135 &109516897
-SphereCollider:
+--- !u!65 &109516897
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -150,8 +151,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .449999988
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.53000402, y: 5.09000254, z: .200001433}
+  m_Center: {x: -3.81469727e-06, y: -2.38418579e-06, z: -9.53674316e-07}
 --- !u!1 &112506189
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,8 +162,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 112506193}
   - 212: {fileID: 112506192}
-  - 135: {fileID: 112506191}
   - 114: {fileID: 112506190}
+  - 65: {fileID: 112506191}
   m_Layer: 0
   m_Name: Button - Facebook
   m_TagString: Untagged
@@ -183,9 +184,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainTexture: {fileID: 21300000, guid: f9717ef8dca7380448408aece8c58a7f, type: 3}
   altTexture: {fileID: 21300000, guid: ec79edd156fa80149823d8263d50ad6b, type: 3}
-  loadLevel: JC_FuckFest
---- !u!135 &112506191
-SphereCollider:
+  disabledTexture: {fileID: 21300000, guid: 2b75c22c515f0b448aa281f26c59faf3, type: 3}
+  loadLevel: JC_Facebook
+--- !u!65 &112506191
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -194,8 +196,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .449999988
-  m_Center: {x: -1.1920929e-06, y: -4.76837158e-07, z: -4.76837158e-07}
+  m_Size: {x: 4.53000402, y: 5.14000225, z: .200001433}
+  m_Center: {x: -3.81469727e-06, y: 1.43051147e-06, z: 9.53674316e-07}
 --- !u!212 &112506192
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -216,7 +218,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f9717ef8dca7380448408aece8c58a7f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec79edd156fa80149823d8263d50ad6b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &112506193
 Transform:
@@ -225,8 +227,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 112506189}
   m_LocalRotation: {x: 3.09086232e-08, y: -.707106829, z: .707106829, w: -3.09086232e-08}
-  m_LocalPosition: {x: 3.88258815, y: .100004956, z: 3.80000138}
-  m_LocalScale: {x: 1, y: 1.60000002, z: 1}
+  m_LocalPosition: {x: 4.18200016, y: .100002512, z: -3.72000003}
+  m_LocalScale: {x: .360000014, y: .500999987, z: 1}
   m_Children: []
   m_Father: {fileID: 690270886}
   m_RootOrder: 3
@@ -259,7 +261,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locationCheckInterval: 10
   locationServiceWaitTime: 20
-  debugLocation: 0
+  debugLocation: 1
+  locationID: 0
 --- !u!4 &607880085
 Transform:
   m_ObjectHideFlags: 0
@@ -396,8 +399,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1214727656}
   - 212: {fileID: 1214727657}
-  - 135: {fileID: 1214727658}
   - 114: {fileID: 1214727659}
+  - 65: {fileID: 1214727658}
   m_Layer: 0
   m_Name: Button - Info
   m_TagString: Untagged
@@ -412,8 +415,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1214727655}
   m_LocalRotation: {x: 3.09086232e-08, y: -.707106829, z: .707106829, w: -3.09086232e-08}
-  m_LocalPosition: {x: -1.66622555, y: .100002997, z: 3.79999995}
-  m_LocalScale: {x: 1, y: 1.60000002, z: 1}
+  m_LocalPosition: {x: 4.18200016, y: .100027166, z: -1.21700001}
+  m_LocalScale: {x: .360000014, y: .500999987, z: 1}
   m_Children: []
   m_Father: {fileID: 690270886}
   m_RootOrder: 1
@@ -437,10 +440,10 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b84fa8347e15a2d4db0f1a7b9a3e039e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7df02dd92c5ea3142acaad6ba29c3c73, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!135 &1214727658
-SphereCollider:
+--- !u!65 &1214727658
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -449,8 +452,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .449999988
-  m_Center: {x: -1.1920929e-06, y: -4.76837158e-07, z: -4.76837158e-07}
+  m_Size: {x: 4.53000402, y: 4.86000252, z: .200001374}
+  m_Center: {x: -3.81469727e-06, y: 7.15255737e-07, z: 4.76837158e-07}
 --- !u!114 &1214727659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,6 +467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainTexture: {fileID: 21300000, guid: b84fa8347e15a2d4db0f1a7b9a3e039e, type: 3}
   altTexture: {fileID: 21300000, guid: 7df02dd92c5ea3142acaad6ba29c3c73, type: 3}
+  disabledTexture: {fileID: 21300000, guid: d9f36b8036b89fb46b180399c2334cc5, type: 3}
   loadLevel: YY_SiteText
 --- !u!1 &1544077892
 GameObject:
@@ -691,8 +695,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1958559000}
   - 212: {fileID: 1958559001}
-  - 135: {fileID: 1958559002}
   - 114: {fileID: 1958559004}
+  - 65: {fileID: 1958559002}
   m_Layer: 0
   m_Name: Button - Video
   m_TagString: Untagged
@@ -707,8 +711,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1958558999}
   m_LocalRotation: {x: 3.09086232e-08, y: -.707106829, z: .707106829, w: -3.09086232e-08}
-  m_LocalPosition: {x: -2.78679252, y: .100003786, z: 3.80000067}
-  m_LocalScale: {x: 1, y: 1.60000002, z: 1}
+  m_LocalPosition: {x: 4.18200016, y: .100011818, z: 1.22319996}
+  m_LocalScale: {x: .360000014, y: .500999987, z: 1}
   m_Children: []
   m_Father: {fileID: 690270886}
   m_RootOrder: 2
@@ -732,10 +736,10 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d75cf0bf5134fb9488c5e9ea52bdba6f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3fb50b5a81d440143bf11dcd45957a4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!135 &1958559002
-SphereCollider:
+--- !u!65 &1958559002
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -744,8 +748,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .449999988
-  m_Center: {x: -9.53674316e-07, y: -4.76837158e-07, z: -9.53674316e-07}
+  m_Size: {x: 4.53000402, y: 4.91000223, z: .200001374}
+  m_Center: {x: -3.81469727e-06, y: -7.15255737e-07, z: 0}
 --- !u!114 &1958559004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,7 +762,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainTexture: {fileID: 21300000, guid: d75cf0bf5134fb9488c5e9ea52bdba6f, type: 3}
-  altTexture: {fileID: 21300000, guid: cdb18d3ed0b800b44b5978f013c39cf6, type: 3}
+  altTexture: {fileID: 21300000, guid: 3fb50b5a81d440143bf11dcd45957a4d, type: 3}
+  disabledTexture: {fileID: 21300000, guid: 775f713abf96676449fd6c00c294fe4b, type: 3}
 --- !u!1 &2096525115
 GameObject:
   m_ObjectHideFlags: 0

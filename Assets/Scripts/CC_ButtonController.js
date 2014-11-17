@@ -1,10 +1,11 @@
 ﻿#pragma strict
 
-@script RequireComponent(SphereCollider);
+@script RequireComponent(BoxCollider);
 @script RequireComponent(SpriteRenderer);
 
 var mainTexture: Sprite;
 var altTexture: Sprite;
+var disabledTexture: Sprite;
 var loadLevel: String;
 
 private var isActive: boolean = false;
@@ -17,8 +18,6 @@ function Start() {
 	appController = controllerObject.GetComponent(CC_ApplicationController);
 	
 	spriteRenderer = this.gameObject.GetComponent(SpriteRenderer);
-	
-	spriteRenderer.sprite = mainTexture;
 }
 
 function OnMouseDown() {
@@ -28,25 +27,38 @@ function OnMouseDown() {
 	if(isActive) {
 		
 		Debug.Log("Toggled " + this.gameObject.name.ToString() + " off.");
-		spriteRenderer.sprite = mainTexture;
-		isActive = false;
 		appController.CleanScene(true);
+		isActive = false;
 	} else {
 		
 		Debug.Log("Toggled " + this.gameObject.name.ToString() + " on.");
-		spriteRenderer.sprite = altTexture;
-		isActive = true;
 		appController.CleanScene(false);
+		spriteRenderer.sprite = mainTexture;
+		isActive = true;
 		Application.LoadLevelAdditive(loadLevel);
 	}
 }
 
 function DeactivateButton() {
-
-	this.gameObject.SetActive(false);
+	
+	if (isActive) {
+		return;
+	}
+	spriteRenderer.sprite = disabledTexture;
+	this.gameObject.GetComponent(BoxCollider).enabled = false;
 }
 
 function ActivateButton() {
 	
-	this.gameObject.SetActive(true);
+	if (isActive) {
+		return;
+	}
+	spriteRenderer.sprite = altTexture;
+	this.gameObject.GetComponent(BoxCollider).enabled = true;
+}
+
+function ResetButton() {
+	
+	spriteRenderer.sprite = altTexture;
+	isActive = false;
 }
