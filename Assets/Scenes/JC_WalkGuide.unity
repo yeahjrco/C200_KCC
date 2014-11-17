@@ -74,85 +74,75 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
---- !u!1 &430877140
+--- !u!1 &283336326
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 430877141}
-  - 33: {fileID: 430877145}
-  - 64: {fileID: 430877144}
-  - 23: {fileID: 430877143}
-  - 114: {fileID: 430877142}
+  - 4: {fileID: 283336327}
+  - 33: {fileID: 283336332}
+  - 64: {fileID: 283336331}
+  - 23: {fileID: 283336330}
+  - 114: {fileID: 283336329}
+  - 114: {fileID: 283336328}
   m_Layer: 0
-  m_Name: Window - Directions
+  m_Name: Window - Walk Guide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &430877141
+--- !u!4 &283336327
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 430877140}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: -1}
-  m_LocalPosition: {x: 2.32135034, y: .0100001944, z: -.251953453}
-  m_LocalScale: {x: .419829994, y: 1, z: .665829182}
-  m_Children: []
-  m_Father: {fileID: 2124509021}
-  m_RootOrder: 1
---- !u!114 &430877142
+  m_GameObject: {fileID: 283336326}
+  m_LocalRotation: {x: 0, y: .707106829, z: -.707106829, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalScale: {x: 2, y: 1, z: 1.20000005}
+  m_Children:
+  - {fileID: 322976546}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &283336328
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 430877140}
+  m_GameObject: {fileID: 283336326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e2171b3dcf9ac446bb2c53bb6c25646, type: 3}
+  m_Script: {fileID: 11500000, guid: c3831a1db38abeb4da71275d3f726b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollPosition: {x: 0, y: 0}
-  mapGO: {fileID: 0}
-  map: {fileID: 0}
-  longString: Direction Listing
-  steps:
-  - id: 1
-    listing:
-    - Head north toward Chai Chee St
-    - Turn right onto Chai Chee St
-    - Turn right toward Chai Chee Rd
-    - Turn left onto Chai Chee Road. (Destination will be on the right.)
-  - id: 2
-    listing:
-    - Head south on Chai Chee Rd
-  - id: 0
-    listing:
-    - Head north on Chai Chee Rd
-    - Turn right onto Chai Chee Ave
-    - Turn right (Destination will be on the left)
-  - id: 4
-    listing:
-    - Head north on Chai Chee Rd
-    - Turn left onto Chai Chee Ave
-    - Turn right onto Chai Chee Rd (Destination will be on the left)
---- !u!23 &430877143
+  setOwnBackdrop: 1
+--- !u!114 &283336329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 283336326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a03de05594ef941b0ed6235040a986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &283336330
 Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 430877140}
+  m_GameObject: {fileID: 283336326}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 229c81b55025ee54e9f4c033f863a9d6, type: 2}
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -160,12 +150,12 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!64 &430877144
+--- !u!64 &283336331
 MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 430877140}
+  m_GameObject: {fileID: 283336326}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -173,25 +163,25 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &430877145
+--- !u!33 &283336332
 MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 430877140}
+  m_GameObject: {fileID: 283336326}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &684479628
+--- !u!1 &322976545
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 684479632}
-  - 33: {fileID: 684479631}
-  - 64: {fileID: 684479630}
-  - 23: {fileID: 684479629}
-  - 114: {fileID: 684479633}
+  - 4: {fileID: 322976546}
+  - 33: {fileID: 322976550}
+  - 64: {fileID: 322976549}
+  - 23: {fileID: 322976548}
+  - 114: {fileID: 322976547}
   m_Layer: 0
   m_Name: Window - Map
   m_TagString: Untagged
@@ -199,84 +189,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &684479629
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 684479628}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!64 &684479630
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 684479628}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &684479631
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 684479628}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &684479632
+--- !u!4 &322976546
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 684479628}
+  m_GameObject: {fileID: 322976545}
   m_LocalRotation: {x: 0, y: 2.7814184e-07, z: 0, w: -1}
-  m_LocalPosition: {x: -2.32606745, y: .00999999978, z: -.299327374}
-  m_LocalScale: {x: .419829875, y: 1, z: .665829301}
+  m_LocalPosition: {x: -.498825192, y: .00999629218, z: -.858633101}
+  m_LocalScale: {x: .645833194, y: 1, z: .672966063}
   m_Children: []
-  m_Father: {fileID: 2124509021}
+  m_Father: {fileID: 283336327}
   m_RootOrder: 0
---- !u!114 &684479633
+--- !u!114 &322976547
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 684479628}
+  m_GameObject: {fileID: 322976545}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c59985f119620be4b90118e0b0b848fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map_id: 0
-  loadOnStart: 1
-  autoLocateCenter: 0
-  centerLocation:
-    address: 
-    latitude: 0
-    longitude: 0
-  zoom: 13
-  mapType: 0
-  size: 512
-  doubleResolution: 0
+  zoomLevel: 15
+  mapSize: 128
   markers:
-  - Msize: 2
-    color: 8
-    label: 1
+  - label: 1
     locations:
     - address: 21 Chai Chee Road
       latitude: 0
@@ -284,9 +223,7 @@ MonoBehaviour:
     - address: Ping Yi Secondary School
       latitude: 0
       longitude: 0
-  - Msize: 2
-    color: 3
-    label: 2
+  - label: 2
     locations:
     - address: 21 Chai Chee Road
       latitude: 0
@@ -294,9 +231,7 @@ MonoBehaviour:
     - address: 26 Chai Chee Road, 460026
       latitude: 0
       longitude: 0
-  - Msize: 2
-    color: 4
-    label: 3
+  - label: 3
     locations:
     - address: Ansar Garden, Singapore
       latitude: 0
@@ -304,9 +239,7 @@ MonoBehaviour:
     - address: 26 Chai Chee Road, 460026
       latitude: 0
       longitude: 0
-  - Msize: 2
-    color: 6
-    label: 2
+  - label: 4
     locations:
     - address: Ansar Garden, Singapore
       latitude: 0
@@ -314,12 +247,9 @@ MonoBehaviour:
     - address: 20 Chai Chee Road 461020
       latitude: 0
       longitude: 0
+  pathWeight: 5
   paths:
-  - weight: 10
-    color: 8
-    fill: 0
-    fillColor: 8
-    locations:
+  - locations:
     - address: Ping Yi Secondary School
       latitude: 0
       longitude: 0
@@ -356,11 +286,7 @@ MonoBehaviour:
     - address: 21 Chai Chee Road
       latitude: 0
       longitude: 0
-  - weight: 10
-    color: 3
-    fill: 0
-    fillColor: 3
-    locations:
+  - locations:
     - address: 21 Chai Chee Rd
       latitude: 0
       longitude: 0
@@ -376,11 +302,7 @@ MonoBehaviour:
     - address: 26 Chai Chee Rd, 462021
       latitude: 0
       longitude: 0
-  - weight: 10
-    color: 4
-    fill: 0
-    fillColor: 4
-    locations:
+  - locations:
     - address: 26 Chai Chee Road, 460026
       latitude: 0
       longitude: 0
@@ -399,11 +321,7 @@ MonoBehaviour:
     - address: Ansar Garden, Singapore
       latitude: 0
       longitude: 0
-  - weight: 10
-    color: 0
-    fill: 0
-    fillColor: 0
-    locations:
+  - locations:
     - address: Ansar Garden, Singapore
       latitude: 0
       longitude: 0
@@ -419,60 +337,16 @@ MonoBehaviour:
     - address: 20 Chai Chee Road, 461020
       latitude: 0
       longitude: 0
-  displayMark:
-  - Msize: 0
-    color: 0
-    label: 
-    locations: []
---- !u!1 &2124509015
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2124509021}
-  - 33: {fileID: 2124509020}
-  - 64: {fileID: 2124509019}
-  - 23: {fileID: 2124509018}
-  - 114: {fileID: 2124509017}
-  - 114: {fileID: 2124509016}
-  m_Layer: 0
-  m_Name: Window - Walk Guide
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2124509016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2124509015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3831a1db38abeb4da71275d3f726b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  setOwnBackdrop: 1
---- !u!114 &2124509017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2124509015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1a03de05594ef941b0ed6235040a986, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!23 &2124509018
+  centerLocation:
+    address: 
+    latitude: 0
+    longitude: 0
+--- !u!23 &322976548
 Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2124509015}
+  m_GameObject: {fileID: 322976545}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -487,12 +361,12 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!64 &2124509019
+--- !u!64 &322976549
 MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2124509015}
+  m_GameObject: {fileID: 322976545}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -500,24 +374,10 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &2124509020
+--- !u!33 &322976550
 MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2124509015}
+  m_GameObject: {fileID: 322976545}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &2124509021
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2124509015}
-  m_LocalRotation: {x: 0, y: .707106829, z: -.707106829, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 2, y: 1, z: 1.20000005}
-  m_Children:
-  - {fileID: 684479632}
-  - {fileID: 430877141}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
