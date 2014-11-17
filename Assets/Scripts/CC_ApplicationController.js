@@ -5,6 +5,7 @@ import System.Collections.Generic;
 var locationCheckInterval: float = 10;
 var locationServiceWaitTime: int = 20;
 var debugLocation: int = 0;
+var locationID: int = 0;
 
 private var locationRadius: float = 0.000263;
 private var objectRegistry: Array;
@@ -58,22 +59,18 @@ function Update(){
 	}
 	if (timeInterval <= 0) {
 	
-		var locationID = GetLocationID();
+		locationID = GetLocationID();
 		if (locationID != 0) {
 			
 			Debug.Log("Activating Station with ID: " + locationID);
 			persistentWindowController.ActivateButtons();
-			if (mapObject != null) {
-			
+			if (mapObject != null)
 				mapController.ActivateStation(locationID);
-			}
 		} else {
 			
 			persistentWindowController.DeactivateButtons();
-			if (mapObject != null) {
-				
+			if (mapObject != null)
 				mapController.DeactivateStations();
-			}
 		}
 		timeInterval = locationCheckInterval;
 	} else {

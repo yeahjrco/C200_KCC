@@ -15,7 +15,7 @@ function Start () {
 	spriteRenderer = spriteRendererObject.GetComponent(SpriteRenderer);
 	
 	yield WaitForSeconds(0.1);
-	ActivateStation(appController.GetLocationID());	
+	ActivateStation(appController.locationID);	
 	spriteRenderer.sprite = stationImages[currentImage];
 }
 

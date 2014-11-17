@@ -16,7 +16,7 @@ function Start(){
 	}
 	
 	yield WaitForSeconds(0.1);
-	ActivateStation(appController.GetLocationID());
+	ActivateStation(appController.locationID);
 }
 
 function ActivateStation(stationID: int) {
