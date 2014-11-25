@@ -71,9 +71,9 @@ function Refresh() {
 	
 	qs += "&markers=size:small|color:green|" + WWW.EscapeURL(String.Format("{0},{1}", currentLat, currentLon));
 	
-	for(i in markers) {
+	for(i in displayMark) {
 	
-		qs += "&markers=size:small|color:gray|label:" + i.label;
+		qs += "&markers=size:large|color:gray|label:" + i.label;
 		for(loc in i.locations) {
 		
 			if(loc.address != "")
