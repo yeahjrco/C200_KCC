@@ -259,9 +259,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc2cdaf9e6106b9468d7aa2d48ab5f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locationCheckInterval: 10
+  locationCheckInterval: 5
   locationServiceWaitTime: 20
-  debugLocation: 1
+  debugLocation: 0
   locationID: 0
 --- !u!4 &607880085
 Transform:
@@ -469,57 +469,6 @@ MonoBehaviour:
   altTexture: {fileID: 21300000, guid: 7df02dd92c5ea3142acaad6ba29c3c73, type: 3}
   disabledTexture: {fileID: 21300000, guid: d9f36b8036b89fb46b180399c2334cc5, type: 3}
   loadLevel: YY_SiteText
---- !u!1 &1544077892
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1544077893}
-  - 132: {fileID: 1544077894}
-  m_Layer: 0
-  m_Name: Debugger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1544077893
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1544077892}
-  m_LocalRotation: {x: 3.09086232e-08, y: .707106829, z: -.707106829, w: -3.09086232e-08}
-  m_LocalPosition: {x: -2.14654517, y: 4.28962994, z: 34.3262177}
-  m_LocalScale: {x: .704225004, y: 5.88235188, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1655997743}
-  m_RootOrder: 0
---- !u!132 &1544077894
-GUIText:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1544077892}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Text: 'User Location: X,X'
-  m_Anchor: 0
-  m_Alignment: 0
-  m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 1
-  m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Material: {fileID: 0}
-  m_FontSize: 40
-  m_FontStyle: 0
-  m_Color:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_PixelCorrect: 1
-  m_RichText: 1
 --- !u!1 &1655997742
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +483,7 @@ GameObject:
   - 65: {fileID: 1655997745}
   - 114: {fileID: 1655997744}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Debugger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -547,10 +496,9 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1655997742}
   m_LocalRotation: {x: -3.09086232e-08, y: -.707106829, z: .707106829, w: -3.09086232e-08}
-  m_LocalPosition: {x: -3.00799918, y: 5.37602282, z: 4.28960991}
-  m_LocalScale: {x: 1.41999996, y: 1, z: .129625008}
-  m_Children:
-  - {fileID: 1544077893}
+  m_LocalPosition: {x: 8.99989033, y: 5.37602282, z: 4.28960991}
+  m_LocalScale: {x: .200000003, y: 1, z: .129625008}
+  m_Children: []
   m_Father: {fileID: 2096525116}
   m_RootOrder: 1
 --- !u!114 &1655997744

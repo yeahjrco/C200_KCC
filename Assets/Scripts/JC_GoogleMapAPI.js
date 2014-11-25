@@ -1,4 +1,4 @@
-﻿#pragma strict
+#pragma strict
 
 	var zoomLevel: int = 15;
 	var mapSize: int = 128;
@@ -13,6 +13,7 @@
 	private var appController: CC_ApplicationController;
 	private var currentLocation: Array;
 	private var centerCoordinatesDict: Dictionary.<int, Array>;
+	private var locationCheckInterval: float = 0;
 	
 function Start() {
 
@@ -20,7 +21,7 @@ function Start() {
 	appController = controllerObject.GetComponent(CC_ApplicationController);
 	
 	centerCoordinatesDict = new Dictionary.<int, Array>();
-	centerCoordinatesDict[1] = new Array(1.326439, 103.9221);
+	centerCoordinatesDict[1] = new Array(1.3265, 103.9221);
 	centerCoordinatesDict[2] = new Array(1.3247795, 103.922951);
 	centerCoordinatesDict[3] = new Array(1.3247469, 103.92424511);
 	centerCoordinatesDict[4] = new Array(1.3256452, 103.9240954);
@@ -30,13 +31,21 @@ function Start() {
 }
 
 function Update() {
+
+	if (locationCheckInterval <= 0) {
 	
-	currentLocation = appController.GetUserLocation();
-	Refresh();
+		currentLocation = appController.GetUserLocation();
+		locationCheckInterval = appController.locationCheckInterval;
+		Refresh();
+	} else {
+		
+		locationCheckInterval -= Time.deltaTime;
+	}
 }
 
 function ActivateWalkGuide(stationID: int) {
 	
+	Debug.Log("Activating Walk Guide ID: " + stationID);
 	var centerLat = centerCoordinatesDict[stationID][0];
 	var centerLon = centerCoordinatesDict[stationID][1];
 	
