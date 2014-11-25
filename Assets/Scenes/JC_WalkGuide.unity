@@ -1,0 +1,383 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+SceneSettings:
+  m_ObjectHideFlags: 0
+  m_PVSData: 
+  m_PVSObjectsArray: []
+  m_PVSPortalsArray: []
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: .25
+    backfaceThreshold: 100
+--- !u!104 &2
+RenderSettings:
+  m_Fog: 0
+  m_FogColor: {r: .5, g: .5, b: .5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: .00999999978
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: .5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 0}
+  m_ObjectHideFlags: 0
+--- !u!127 &3
+LevelGameManager:
+  m_ObjectHideFlags: 0
+--- !u!157 &4
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  m_LightProbes: {fileID: 0}
+  m_Lightmaps: []
+  m_LightmapsMode: 1
+  m_BakedColorSpace: 0
+  m_UseDualLightmapsInForward: 0
+  m_LightmapEditorSettings:
+    m_Resolution: 50
+    m_LastUsedResolution: 0
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
+    m_BounceBoost: 1
+    m_BounceIntensity: 1
+    m_SkyLightColor: {r: .860000014, g: .930000007, b: 1, a: 1}
+    m_SkyLightIntensity: 0
+    m_Quality: 0
+    m_Bounces: 1
+    m_FinalGatherRays: 1000
+    m_FinalGatherContrastThreshold: .0500000007
+    m_FinalGatherGradientThreshold: 0
+    m_FinalGatherInterpolationPoints: 15
+    m_AOAmount: 0
+    m_AOMaxDistance: .100000001
+    m_AOContrast: 1
+    m_LODSurfaceMappingDistance: 1
+    m_Padding: 0
+    m_TextureCompression: 0
+    m_LockAtlas: 0
+--- !u!196 &5
+NavMeshSettings:
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    agentRadius: .5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: .400000006
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    accuratePlacement: 0
+    minRegionArea: 2
+    widthInaccuracy: 16.666666
+    heightInaccuracy: 10
+  m_NavMesh: {fileID: 0}
+--- !u!1 &283336326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 283336327}
+  - 33: {fileID: 283336332}
+  - 64: {fileID: 283336331}
+  - 23: {fileID: 283336330}
+  - 114: {fileID: 283336329}
+  - 114: {fileID: 283336328}
+  m_Layer: 0
+  m_Name: Window - Walk Guide
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &283336327
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 283336326}
+  m_LocalRotation: {x: 0, y: .707106829, z: -.707106829, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalScale: {x: 2, y: 1, z: 1.20000005}
+  m_Children:
+  - {fileID: 322976546}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &283336328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 283336326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3831a1db38abeb4da71275d3f726b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setOwnBackdrop: 1
+--- !u!114 &283336329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 283336326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a03de05594ef941b0ed6235040a986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &283336330
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 283336326}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &283336331
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 283336326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &283336332
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 283336326}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &322976545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 322976546}
+  - 33: {fileID: 322976550}
+  - 64: {fileID: 322976549}
+  - 23: {fileID: 322976548}
+  - 114: {fileID: 322976547}
+  m_Layer: 0
+  m_Name: Window - Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &322976546
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 322976545}
+  m_LocalRotation: {x: 0, y: 2.7814184e-07, z: 0, w: -1}
+  m_LocalPosition: {x: -.729694664, y: .00999498274, z: -.0153175602}
+  m_LocalScale: {x: .850000024, y: 1, z: .997299731}
+  m_Children: []
+  m_Father: {fileID: 283336327}
+  m_RootOrder: 0
+--- !u!114 &322976547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 322976545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c59985f119620be4b90118e0b0b848fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomLevel: 15
+  mapSize: 128
+  markers:
+  - label: 1
+    locations:
+    - address: 21 Chai Chee Road
+      latitude: 0
+      longitude: 0
+    - address: Ping Yi Secondary School
+      latitude: 0
+      longitude: 0
+  - label: 2
+    locations:
+    - address: 21 Chai Chee Road
+      latitude: 0
+      longitude: 0
+    - address: 26 Chai Chee Road, 460026
+      latitude: 0
+      longitude: 0
+  - label: 3
+    locations:
+    - address: Ansar Garden, Singapore
+      latitude: 0
+      longitude: 0
+    - address: 26 Chai Chee Road, 460026
+      latitude: 0
+      longitude: 0
+  - label: 4
+    locations:
+    - address: Ansar Garden, Singapore
+      latitude: 0
+      longitude: 0
+    - address: 20 Chai Chee Road 461020
+      latitude: 0
+      longitude: 0
+  pathWeight: 5
+  paths:
+  - locations:
+    - address: Ping Yi Secondary School
+      latitude: 0
+      longitude: 0
+    - address: 
+      latitude: 1.32774603
+      longitude: 103.920601
+    - address: 
+      latitude: 1.32821202
+      longitude: 103.920601
+    - address: 
+      latitude: 1.32832396
+      longitude: 103.921501
+    - address: 
+      latitude: 1.32841599
+      longitude: 103.922798
+    - address: 
+      latitude: 1.32838094
+      longitude: 103.9235
+    - address: 
+      latitude: 1.32806003
+      longitude: 103.924599
+    - address: 
+      latitude: 1.326841
+      longitude: 103.924301
+    - address: 
+      latitude: 1.32655096
+      longitude: 103.924103
+    - address: 
+      latitude: 1.32662594
+      longitude: 103.923401
+    - address: 
+      latitude: 1.32564497
+      longitude: 103.923203
+    - address: 21 Chai Chee Road
+      latitude: 0
+      longitude: 0
+  - locations:
+    - address: 21 Chai Chee Rd
+      latitude: 0
+      longitude: 0
+    - address: 
+      latitude: 1.32556796
+      longitude: 103.923103
+    - address: 
+      latitude: 1.32392704
+      longitude: 103.922997
+    - address: 
+      latitude: 1.32309496
+      longitude: 103.923203
+    - address: 26 Chai Chee Rd, 462021
+      latitude: 0
+      longitude: 0
+  - locations:
+    - address: 26 Chai Chee Road, 460026
+      latitude: 0
+      longitude: 0
+    - address: 
+      latitude: 1.323084
+      longitude: 103.923401
+    - address: 
+      latitude: 1.32381403
+      longitude: 103.922897
+    - address: 
+      latitude: 1.32525098
+      longitude: 103.923203
+    - address: 
+      latitude: 1.32478499
+      longitude: 103.925598
+    - address: Ansar Garden, Singapore
+      latitude: 0
+      longitude: 0
+  - locations:
+    - address: Ansar Garden, Singapore
+      latitude: 0
+      longitude: 0
+    - address: 
+      latitude: 1.32495296
+      longitude: 103.925499
+    - address: 
+      latitude: 1.32546306
+      longitude: 103.923203
+    - address: 
+      latitude: 1.32624102
+      longitude: 103.923203
+    - address: 20 Chai Chee Road, 461020
+      latitude: 0
+      longitude: 0
+  centerLocation:
+    address: 
+    latitude: 0
+    longitude: 0
+--- !u!23 &322976548
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 322976545}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &322976549
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 322976545}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &322976550
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 322976545}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}

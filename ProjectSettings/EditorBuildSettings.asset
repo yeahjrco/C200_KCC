@@ -8,6 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CC_MainScene.unity
   - enabled: 1
+    path: Assets/Scenes/JC_WalkGuide.unity
+  - enabled: 1
     path: Assets/Scenes/JT_UserGuide.unity
   - enabled: 1
     path: Assets/Scenes/MT_HeritageMap.unity

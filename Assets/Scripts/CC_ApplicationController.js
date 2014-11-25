@@ -5,6 +5,7 @@ import System.Collections.Generic;
 var locationCheckInterval: float = 10;
 var locationServiceWaitTime: int = 20;
 var debugLocation: int = 0;
+var locationID: int = 0;
 
 private var locationRadius: float = 0.000263;
 private var objectRegistry: Array;
@@ -29,21 +30,17 @@ function Start() {
 	coordinatesDict = new Dictionary.<int, Array>();
 	
 	// Coordinates 
-	coordinatesDict[1] = new Array (1.327655, 103.920311);
-	coordinatesDict[2] = new Array (1.325889, 103.922345);
-	coordinatesDict[3] = new Array (1.323408, 103.923457);
-	coordinatesDict[4] = new Array (1.324512, 103.925444);
-	coordinatesDict[5] = new Array (1.326357, 103.922918);
+	coordinatesDict[1] = new Array(1.327655, 103.920311);
+	coordinatesDict[2] = new Array(1.325889, 103.922345);
+	coordinatesDict[3] = new Array(1.323408, 103.923457);
+	coordinatesDict[4] = new Array(1.324512, 103.925444);
+	coordinatesDict[5] = new Array(1.326357, 103.922918);
 	
 	// Check if location service is enabled by user
-	if (!Input.location.isEnabledByUser){
-	
+	if (!Input.location.isEnabledByUser)
 		Debug.Log("Enable location service"); 
-	}
-	else{
-	
+	else
 		StartLocation();
-	}
 }
 
 function Update(){
@@ -58,22 +55,18 @@ function Update(){
 	}
 	if (timeInterval <= 0) {
 	
-		var locationID = GetLocationID();
+		locationID = GetLocationID();
 		if (locationID != 0) {
 			
 			Debug.Log("Activating Station with ID: " + locationID);
 			persistentWindowController.ActivateButtons();
-			if (mapObject != null) {
-			
+			if (mapObject != null)
 				mapController.ActivateStation(locationID);
-			}
 		} else {
 			
 			persistentWindowController.DeactivateButtons();
-			if (mapObject != null) {
-				
+			if (mapObject != null)
 				mapController.DeactivateStations();
-			}
 		}
 		timeInterval = locationCheckInterval;
 	} else {
@@ -93,9 +86,9 @@ function CleanScene(loadHeritageMap: boolean) {
 	}
 	objectRegistry.Clear();
 	persistentWindow.GetComponent(MeshRenderer).enabled = true;
-	if (loadHeritageMap) {
+	if (loadHeritageMap)
 		Application.LoadLevelAdditive("MT_HeritageMap");
-	}
+	persistentWindowController.ResetButtons();
 }
 
 function RegisterWindow(gameObject: GameObject) {
@@ -137,7 +130,7 @@ function GetUserLocation() {
 	coordinates.Push(Input.location.lastData.latitude);
 	coordinates.Push(Input.location.lastData.longitude);
 	Debug.Log("User Location: " + coordinates);
-	GameObject.Find("Debugger").gameObject.guiText.text = "User Location: " + coordinates;
+	//GameObject.Find("Debugger").gameObject.guiText.text = "User Location: " + coordinates;
 	
 	return coordinates;
 }
@@ -151,10 +144,8 @@ function GetLocationID() {
 		var locationLat = coordinatesDict[locationID][0];
 		var locationLon = coordinatesDict[locationID][1];
 			
-		if (LocationInRange(currentLocation, locationLat, locationLon)) {
-			
+		if (LocationInRange(currentLocation, locationLat, locationLon))
 			return locationID;
-		}
 	}
 	return debugLocation;
 }
